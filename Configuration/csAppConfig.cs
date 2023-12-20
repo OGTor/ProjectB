@@ -52,10 +52,10 @@ public sealed class csAppConfig
         _configuration = builder.Build();
 
         //get DbSet details
-        _configuration.Bind("DbSets", _dbSets);  //Need the NuGet package Microsoft.Extensions.Configuration.Binder
+        _configuration.Bind("DbSets", _dbSets);  
 
         //Set the active db set and fill in location and server into Login Details
-        var i = int.Parse(_configuration["DbSetActiveIdx"]);
+        var i = int.Parse(_configuration["DbSetActiveIdx"]);                                     
         _dbSetActive = _dbSets[i];
         _dbSetActive.DbLogins.ForEach(i =>
         {

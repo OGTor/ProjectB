@@ -29,7 +29,7 @@ SQLServer:
 add-migration initial_migration -context SqlServerDbContext -outputdir Migrations/SqlServerMigrations
 
 MariaDb:
-add-migration initial_migration --context MySqlDbContext --outputdir Migrations/MySqlMigrations
+add-migration initial_migration -context MySqlDbContext -outputdir Migrations/MySqlMigrations
 
 Postgres:
 add-migration initial_migration --context PostgresDbContext --outputdir Migrations/PostgresMigrations
